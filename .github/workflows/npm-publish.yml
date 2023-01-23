@@ -54,6 +54,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Test
+        run: pnpm run test
+
       - name: Publish 🚀
         run: npm run release
         # 利用 automation token publish 至 npm，这里NPM_TOKEN 就是我们上文中设定的

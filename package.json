@@ -5,7 +5,8 @@
     "packages/*"
   ],
   "scripts": {
-    "release": "pnpm -r run test && lerna publish --conventional-commits --no-private --registry=https://registry.npmjs.org/"
+    "test": "pnpm -r run test",
+    "release": "lerna publish --conventional-commits --yes --no-private --registry=https://registry.npmjs.org/"
   },
   "husky": {
     "hooks": {
