@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/suiyi8760/ux-dev-toolkit/compare/v1.1.0...v1.2.0) (2023-01-23)
+
+
+### Bug Fixes
+
+* code formatted ([2b0e86f](https://github.com/suiyi8760/ux-dev-toolkit/commit/2b0e86f9e7016632789ebd77bcca2d912a6714fb))
+
+
+### Features
+
+* 增加全局变量eslint规则 ([96eda3b](https://github.com/suiyi8760/ux-dev-toolkit/commit/96eda3bfc9232164fe2092c7814a9108d9da63c0))
+
+
+
+
+
 # 1.1.0 (2023-01-21)
 
 
