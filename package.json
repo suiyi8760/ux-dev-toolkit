@@ -4,6 +4,9 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "release": "pnpm -r run test && lerna publish --conventional-commits --no-private"
+  },
   "husky": {
     "hooks": {
       "commit-msg": "cross-env-shell commitlint -e $GIT_PARAMS"
