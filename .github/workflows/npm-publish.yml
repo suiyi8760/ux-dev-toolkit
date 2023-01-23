@@ -1,0 +1,61 @@
+name: Publish Package to npmjs
+
+on:
+  push:
+    # 针对指定分支
+    branches:
+      - master
+    # 针对指定文件修改，这里可参考https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#onpushpull_requestpaths
+    paths:
+      - 'packages/*'
+  # 让你能够手动触发，方便测试，参考https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows#workflow_dispatch
+  workflow_dispatch:
+
+jobs:
+  auto-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          # 0 indicates all history for all branches and tags，保留所有历史，为了让lerna publish 时可以生成有效的change log
+          fetch-depth: '0'
+
+      # Setup .npmrc file to publish to npm
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
+          # Defaults to the user or organization that owns the workflow file
+          scope: '@fedevlab'
+
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Publish 🚀
+        run: npm run release
+        # 利用 automation token publish 至 npm，这里NPM_TOKEN 就是我们上文中设定的
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
