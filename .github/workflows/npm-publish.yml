@@ -57,6 +57,12 @@ jobs:
       - name: Test
         run: pnpm run test
 
+      - name: Setup credentials
+        # lerna publish 后会提交代码到master分支，这里是为了配置 git 用户，区分用户
+        run: |
+          git config --global user.email action@github.com
+          git config --global user.name Github Action
+
       - name: Publish 🚀
         run: npm run release
         # 利用 automation token publish 至 npm，这里NPM_TOKEN 就是我们上文中设定的
