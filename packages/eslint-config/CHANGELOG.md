@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/suiyi8760/ux-dev-toolkit/compare/v1.2.1...v1.2.2) (2023-01-24)
+
+**Note:** Version bump only for package @fedevlab/eslint-config
+
+
+
+
+
 ## [1.2.1](https://github.com/suiyi8760/ux-dev-toolkit/compare/v1.2.0...v1.2.1) (2023-01-23)
 
 **Note:** Version bump only for package @fedevlab/eslint-config
