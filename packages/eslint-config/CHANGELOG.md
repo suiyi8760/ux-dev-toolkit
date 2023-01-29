@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/suiyi8760/ux-dev-toolkit/compare/v1.2.3...v1.3.0) (2023-01-29)
+
+
+### Features
+
+* remove-ts-parse-options ([da0d09e](https://github.com/suiyi8760/ux-dev-toolkit/commit/da0d09e6f1e010b2e55e7571fffb50d54a8bdfef))
+
+
+
+
+
 ## [1.2.3](https://github.com/suiyi8760/ux-dev-toolkit/compare/v1.2.2...v1.2.3) (2023-01-29)
 
 
