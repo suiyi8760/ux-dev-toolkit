@@ -1,0 +1,28 @@
+name: Merge to release branch
+
+on:
+  push:
+    # 针对指定分支
+    branches:
+      - master
+
+jobs:
+  auto-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+          uses: actions/checkout@v3
+          with:
+            fetch-depth: '0'
+      - name: Setup credentials
+        # lerna publish 后会提交代码到master分支，这里是为了配置 git 用户，区分用户
+        run: |
+          git config --global user.email action@github.com
+          git config --global user.name Github Action
+      - name: Merge master to release
+        run: |
+          git fetch --unshallow
+          git checkout release
+          git pull
+          git merge --no-ff master -m "release: merge master to trigger release."
+          git push
