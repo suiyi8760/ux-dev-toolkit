@@ -8,9 +8,6 @@ module.exports = {
     // 'prettier/@typescript-eslint'
     // require.resolve('eslint-config-prettier/standard')
   ],
-  parserOptions: {
-    project: ['./tsconfig.json']
-  },
   overrides: [
     {
       files: ['*.ts'],
