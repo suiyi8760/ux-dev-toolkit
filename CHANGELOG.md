@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.3](https://github.com/suiyi8760/ux-dev-toolkit/compare/v1.2.2...v1.2.3) (2023-01-29)
+
+
+### Bug Fixes
+
+* change tsconfig path ([b45b8a3](https://github.com/suiyi8760/ux-dev-toolkit/commit/b45b8a32ce4be32ec88f758cadfb59ff77075f2e))
+* fix github actions syntax error ([d6603eb](https://github.com/suiyi8760/ux-dev-toolkit/commit/d6603eb0fb7d2d1ebaee3f97fbd054e2e6611459))
+* fix peer dependencies error ([be7a99d](https://github.com/suiyi8760/ux-dev-toolkit/commit/be7a99dd925c2d587d806ddfa0f5c94477468d95))
+* 还原github actions配置 ([be89dd1](https://github.com/suiyi8760/ux-dev-toolkit/commit/be89dd1bbfd17e143c58b244885e2475e32b4449))
+
+
+
+
+
 ## [1.2.2](https://github.com/suiyi8760/ux-dev-toolkit/compare/v1.2.1...v1.2.2) (2023-01-24)
 
 **Note:** Version bump only for package root
