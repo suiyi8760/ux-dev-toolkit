@@ -1,4 +1,4 @@
-const path = require('path')
+require('@rushstack/eslint-patch/modern-module-resolution')
 
 module.exports = {
   extends: [
@@ -9,7 +9,7 @@ module.exports = {
     // require.resolve('eslint-config-prettier/standard')
   ],
   parserOptions: {
-    project: path.resolve(process.cwd(), './tsconfig.json')
+    project: ['./tsconfig.json']
   },
   overrides: [
     {
