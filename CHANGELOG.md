@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/suiyi8760/ux-dev-toolkit/compare/v1.3.0...v1.3.1) (2023-01-30)
+
+
+### Bug Fixes
+
+* add ts eslint parser ([88909fd](https://github.com/suiyi8760/ux-dev-toolkit/commit/88909fd0f8185a097b4d1bfb50b6af0dc6b999f3))
+
+
+
+
+
 # [1.3.0](https://github.com/suiyi8760/ux-dev-toolkit/compare/v1.2.3...v1.3.0) (2023-01-29)
 
 
