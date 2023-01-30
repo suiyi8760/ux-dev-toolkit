@@ -1,6 +1,7 @@
 require('@rushstack/eslint-patch/modern-module-resolution')
 
 module.exports = {
+  parser: '@typescript-eslint/parser',
   extends: [
     require.resolve('./shared/base'),
     require.resolve('eslint-config-standard-with-typescript'),
